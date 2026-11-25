@@ -1,0 +1,24 @@
+# Core RAG stack
+langchain==0.3.27
+langchain-community==0.3.31
+langchain-huggingface==0.3.1
+langchain-groq==0.3.8
+sentence-transformers==5.1.1
+faiss-cpu>=1.9
+huggingface_hub>=0.30
+
+# Web app
+flask>=3.1,<4
+python-dotenv>=1.0
+requests>=2.31
+
+# PDF reading (fonttools improves text extraction for some fonts)
+pypdf>=5.0
+fonttools>=4.50
+
+# Production servers (pick one)
+gunicorn>=22.0; platform_system != "Windows"
+waitress>=3.0; platform_system == "Windows"
+
+# Tests
+pytest>=8.0
